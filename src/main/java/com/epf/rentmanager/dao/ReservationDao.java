@@ -29,7 +29,13 @@ public class ReservationDao {
 	private static final String FIND_RESERVATIONS_BY_ID_QUERY = "SELECT client_id, vehicle_id, debut, fin FROM Reservation WHERE id=?;";
 	private static final String FIND_RESERVATIONS_QUERY = "SELECT id, client_id, vehicle_id, debut, fin FROM Reservation;";
 	private static final String EDIT_RESERVATION_QUERY = "UPDATE Reservation SET client_id=?, vehicle_id=?, debut=?, fin=? WHERE id=?;";
-		
+
+	/**
+	 * Créé un une réservation
+	 * @param reservation
+	 * @return l'id de la réservation
+	 * @throws DaoException en cas d'erreur
+	 */
 	public long create(Reservation reservation) throws DaoException {
 		try(Connection connection = ConnectionManager.getConnection()){
 			PreparedStatement ps = connection.prepareStatement(CREATE_RESERVATION_QUERY,Statement.RETURN_GENERATED_KEYS);
@@ -49,7 +55,12 @@ public class ReservationDao {
 			throw new DaoException();
 		}
 	}
-	
+	/**
+	 * Supprime un une réservation
+	 * @param idClient
+	 * @return 0 ou 1 en fonction de si la suppression a eu lieu
+	 * @throws DaoException en cas d'erreur
+	 */
 	public long delete(int idClient) throws DaoException {
 		try(Connection connection = ConnectionManager.getConnection()){
 			PreparedStatement ps = connection.prepareStatement(DELETE_RESERVATION_QUERY);
@@ -66,7 +77,12 @@ public class ReservationDao {
 		}
 	}
 
-	
+	/**
+	 * Trouve toutes les réservations associées à un client
+	 * @param clientId
+	 * @return la liste de réservations
+	 * @throws DaoException en cas d'erreur
+	 */
 	public List<Reservation> findResaByClientId(long clientId) throws DaoException {
 		List<Reservation> reservations = new ArrayList<Reservation>();
 		try(Connection connection = ConnectionManager.getConnection()){
@@ -87,7 +103,12 @@ public class ReservationDao {
 
 		return reservations;
 	}
-	
+	/**
+	 * Trouve toutes les réservations associées à un véhicule
+	 * @param vehicleId
+	 * @return la liste de réservations
+	 * @throws DaoException en cas d'erreur
+	 */
 	public List<Reservation> findResaByVehicleId(long vehicleId) throws DaoException {
 		List<Reservation> reservations = new ArrayList<Reservation>();
 		try(Connection connection = ConnectionManager.getConnection()){
@@ -107,6 +128,12 @@ public class ReservationDao {
 		}
 		return reservations;
 	}
+	/**
+	 * Trouve une réservation par son id
+	 * @param id
+	 * @return la réservation
+	 * @throws DaoException en cas d'erreur
+	 */
 	public Reservation findById(long id) throws DaoException {
 		try(Connection connection = ConnectionManager.getConnection()){
 			PreparedStatement pstatement = connection.prepareStatement(FIND_RESERVATIONS_BY_ID_QUERY);
@@ -123,6 +150,12 @@ public class ReservationDao {
 			throw new DaoException();
 		}
 	}
+	/**
+	 * Modifie une réservation
+	 * @param reservation
+	 * @return
+	 * @throws DaoException en cas d'erreur
+	 */
 	public long edit(Reservation reservation) throws DaoException {
 		try(Connection connection = ConnectionManager.getConnection()) {
 			PreparedStatement ps =connection.prepareStatement(EDIT_RESERVATION_QUERY);
@@ -136,7 +169,11 @@ public class ReservationDao {
 			throw new DaoException();
 		}
 	}
-
+	/**
+	 * Trouve toutes les réservations
+	 * @return la liste de réservations
+	 * @throws DaoException en cas d'erreur
+	 */
 	public List<Reservation> findAll() throws DaoException {
 		List<Reservation> reservations = new ArrayList<Reservation>();
 		try(Connection connection = ConnectionManager.getConnection()){

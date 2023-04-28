@@ -29,7 +29,12 @@ public class ClientDao {
 	private static final String FIND_CLIENT_QUERY = "SELECT nom, prenom, email, naissance FROM Client WHERE id=?;";
 	private static final String FIND_CLIENTS_QUERY = "SELECT id, nom, prenom, email, naissance FROM Client;";
 	private static final String EDIT_CLIENT_QUERY = "UPDATE Client SET nom=?, prenom=?, email=?, naissance=? WHERE id=?;";
-	
+	/**
+	 * Créé un client
+	 * @param client
+	 * @return l'id du client
+	 * @throws DaoException en cas d'erreur
+	 */
 	public long create(Client client) throws DaoException {
 		try(Connection connection = ConnectionManager.getConnection()){
 			PreparedStatement ps = connection.prepareStatement(CREATE_CLIENT_QUERY,Statement.RETURN_GENERATED_KEYS);
@@ -49,7 +54,12 @@ public class ClientDao {
 			throw new DaoException();
 		}
 	}
-	
+	/**
+	 * Supprime un client
+	 * @param Id_client
+	 * @return 0 ou 1 en fonction de si la suppression a eu lieu
+	 * @throws DaoException en cas d'erreur
+	 */
 	public long delete(int Id_client) throws DaoException {
 		try(Connection connection = ConnectionManager.getConnection()){
 			PreparedStatement ps = connection.prepareStatement(DELETE_CLIENT_QUERY);
@@ -66,6 +76,12 @@ public class ClientDao {
 			throw new DaoException();
 		}
 	}
+	/**
+	 * Modifie un client
+	 * @param client
+	 * @return
+	 * @throws DaoException en cas d'erreur
+	 */
 	public long edit(Client client) throws DaoException {
 		try(Connection connection = ConnectionManager.getConnection()) {
 			PreparedStatement ps =connection.prepareStatement(EDIT_CLIENT_QUERY);
@@ -79,7 +95,12 @@ public class ClientDao {
 			throw new DaoException();
 		}
 	}
-
+	/**
+	 * Trouve un client par son id
+	 * @param id
+	 * @return le client
+	 * @throws DaoException en cas d'erreur
+	 */
 	public Client findById(long id) throws DaoException {
 		try{
 			Connection connection = ConnectionManager.getConnection();
@@ -99,6 +120,11 @@ public class ClientDao {
 		}
 	}
 
+	/**
+	 * Trouve tous les clients
+	 * @return la liste de clients
+	 * @throws DaoException en cas d'erreur
+	 */
 	public List<Client> findAll() throws DaoException {
 		List<Client> clients = new ArrayList<Client>();
 		try{

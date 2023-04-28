@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.epf.rentmanager.exception.DaoException;
+import com.epf.rentmanager.exception.ServiceException;
 import com.epf.rentmanager.model.Vehicle;
 import com.epf.rentmanager.persistence.ConnectionManager;
 import org.springframework.stereotype.Repository;
@@ -21,7 +22,13 @@ public class VehicleDao {
 	private static final String EDIT_VEHICLE_QUERY = "UPDATE Vehicle SET constructeur=?, nb_places=? WHERE id=?;";
 	private static final String FIND_VEHICLE_QUERY = "SELECT id, constructeur, nb_places FROM Vehicle WHERE id=?;";
 	private static final String FIND_VEHICLES_QUERY = "SELECT id, constructeur,nb_places FROM Vehicle;";
-	
+
+	/**
+	 * Créé un véhicule
+	 * @param vehicle
+	 * @return l'id du véhicule
+	 * @throws DaoException en cas d'erreur
+	 */
 	public long create(Vehicle vehicle) throws DaoException {
 		try(Connection connection = ConnectionManager.getConnection()){
 			PreparedStatement ps = connection.prepareStatement(CREATE_VEHICLE_QUERY,Statement.RETURN_GENERATED_KEYS);
@@ -39,6 +46,12 @@ public class VehicleDao {
 			throw 	new DaoException();
 		}
 	}
+	/**
+	 * Supprime un véhicule
+	 * @param id_Vehicle
+	 * @return 1 ou 0 en fonction de si la supression a lieu
+	 * @throws DaoException en cas d'erreur
+	 */
 
 	public long delete(int id_Vehicle) throws DaoException {
 		try(Connection connection = ConnectionManager.getConnection()){
@@ -55,6 +68,14 @@ public class VehicleDao {
 			throw new DaoException();
 		}
 	}
+
+	/**
+	 * Modifie un véhicule
+	 * @param vehicle
+	 * @return
+	 * @throws DaoException en cas d'erreur
+	 */
+
 	public long edit(Vehicle vehicle) throws DaoException {
 		try(Connection connection = ConnectionManager.getConnection()) {
 			PreparedStatement ps =connection.prepareStatement(EDIT_VEHICLE_QUERY);
@@ -67,7 +88,12 @@ public class VehicleDao {
 		}
 
 	}
-
+	/**
+	 * Trouve un véhicule par son Id
+	 * @param id
+	 * @return le véhicule
+	 * @throws DaoException en cas d'erreur
+	 */
 	public Vehicle findById(long id) throws DaoException {
 		try{
 			Connection connection = ConnectionManager.getConnection();
@@ -84,7 +110,11 @@ public class VehicleDao {
 			throw new DaoException();
 		}
 	}
-
+	/**
+	 * Trouve tous les véhicules
+	 * @return la liste de véhicule
+	 * @throws DaoException en cas d'erreur
+	 */
 	public List<Vehicle> findAll() throws DaoException {
 		List<Vehicle> vehicles = new ArrayList<Vehicle>();
 		try{
