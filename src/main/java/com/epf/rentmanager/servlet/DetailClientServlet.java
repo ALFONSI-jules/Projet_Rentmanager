@@ -40,16 +40,13 @@ public class DetailClientServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try{
-
             request.setAttribute("nb_reservations", reservationService.findByClientId(Integer.parseInt(request.getParameter("id"))).size());
             request.setAttribute("reservations", reservationService.findByClientId(Integer.parseInt(request.getParameter("id"))));
             request.setAttribute("vehicle", vehicleService);
             request.setAttribute("user", clientService.findById(Integer.parseInt(request.getParameter("id"))));
-
         }
         catch(ServiceException e){
             e.printStackTrace();
-
         }
         this.getServletContext().getRequestDispatcher("/WEB-INF/views/users/details.jsp").forward(request, response);
 

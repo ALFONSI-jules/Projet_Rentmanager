@@ -56,8 +56,9 @@
                                                 <td>${vehicle.findById(reservation.vehicle_id).constructeur}</td>
                                                 <td>${reservation.debut}</td>
                                                 <td>${reservation.fin}</td>
+                                                </tr>
                                             </c:forEach>
-                                        </tr>
+
                                     </table>
                                 </div>
                             </div>

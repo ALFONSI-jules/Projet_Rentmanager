@@ -56,8 +56,9 @@
                                                 <td>${user.findById(reservation.client_id).nom} ${user.findById(reservation.client_id).prenom}</td>
                                                 <td>${reservation.debut}</td>
                                                 <td>${reservation.fin}</td>
+                                                </tr>
                                             </c:forEach>
-                                        </tr>
+
                                     </table>
                                 </div>
                             </div>

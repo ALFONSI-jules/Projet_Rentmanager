@@ -21,9 +21,6 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/cars/create")
 public class CreateVehicleServlet extends HttpServlet {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
 
     @Autowired
@@ -34,18 +31,13 @@ public class CreateVehicleServlet extends HttpServlet {
         SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
     }
 
-
-
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         this.getServletContext().getRequestDispatcher("/WEB-INF/views/vehicles/create.jsp").forward(request, response);
 
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         try{
             Vehicle vehicle = new Vehicle();
             String constructeur = request.getParameter("constructeur");
@@ -54,18 +46,17 @@ public class CreateVehicleServlet extends HttpServlet {
             vehicle.setNb_places(nb_places);
             if (ValidateurVehicle.nbPlaces_valide(vehicle)){
                 vehicleService.create(vehicle);
+                response.sendRedirect("../cars");
             }
             else{
-
+                response.getWriter().write("Le nombre de places doit être compris entre 2 et 9");
             }
-
-
-
         }
         catch(ServiceException e){
             e.printStackTrace();
         }
-        this.getServletContext().getRequestDispatcher("/WEB-INF/views/vehicles/create.jsp").forward(request, response);
+
+
     }
 
 }

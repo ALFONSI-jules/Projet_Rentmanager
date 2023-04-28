@@ -19,7 +19,6 @@ public class ListeClientServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
 
-
     @Autowired
     ClientService clientService;
 
@@ -32,13 +31,9 @@ public class ListeClientServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-
             request.setAttribute("users", clientService.findAll());
-
-
         } catch (ServiceException e) {
             e.printStackTrace();
-
         }
         this.getServletContext().getRequestDispatcher("/WEB-INF/views/users/list.jsp").forward(request, response);
 

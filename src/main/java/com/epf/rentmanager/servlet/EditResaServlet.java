@@ -32,26 +32,18 @@ public class EditResaServlet extends HttpServlet {
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         try {
-
             request.setAttribute("clientObj", clientService.findAll());
             request.setAttribute("vehicleObj", vehicleService.findAll());
             request.setAttribute("reservation", reservationService.findById(Integer.parseInt(request.getParameter("id"))));
-
         } catch (ServiceException e) {
             throw new RuntimeException(e);
         }
         this.getServletContext().getRequestDispatcher("/WEB-INF/views/rents/edit.jsp").forward(request, response);
-
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
         try {
             Reservation reservation = new Reservation();
-
-
             reservation.setClient_id(Integer.parseInt(request.getParameter("client")));
             reservation.setVehicle_id(Integer.parseInt(request.getParameter("vehicle")));
             reservation.setDebut(LocalDate.parse(request.getParameter("debut")));
@@ -61,8 +53,6 @@ public class EditResaServlet extends HttpServlet {
         } catch (ServiceException e) {
             throw new RuntimeException(e);
         }
-
-
         response.sendRedirect("../rents");
     }
 

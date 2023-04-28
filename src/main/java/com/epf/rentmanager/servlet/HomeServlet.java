@@ -32,18 +32,15 @@ public class HomeServlet extends HttpServlet {
 		super.init();
 		SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
 	}
-
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 	try{
 		request.setAttribute("nbClients", clientService.count());
 		request.setAttribute("nbVehicles", vehicleService.count());
 		request.setAttribute("nbReservations", reservationService.count());
-
 	}
 	catch(ServiceException e){
 		e.printStackTrace();
-
 	}
 	 this.getServletContext().getRequestDispatcher("/WEB-INF/views/home.jsp").forward(request, response);
 

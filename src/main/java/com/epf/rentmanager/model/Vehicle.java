@@ -1,6 +1,5 @@
 package com.epf.rentmanager.model;
 
-import java.time.LocalDate;
 
 public class Vehicle{
 

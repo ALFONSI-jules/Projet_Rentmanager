@@ -22,9 +22,6 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/users/create")
 public class CreateClientServlet extends HttpServlet {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
 
     @Autowired
@@ -38,14 +35,12 @@ public class CreateClientServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         this.getServletContext().getRequestDispatcher("/WEB-INF/views/users/create.jsp").forward(request, response);
 
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         try{
             Client client1 = new Client();
             String nom = request.getParameter("nom");
@@ -57,17 +52,18 @@ public class CreateClientServlet extends HttpServlet {
             client1.setEmail(email);
             client1.setNaissance(date);
             if (ValidateurClient.isLegal(client1) && ValidateurClient.emailValide(client1) && ValidateurClient.nomValide(client1)){
-
                 clientService.create(client1);
+                response.sendRedirect("../users");
             }
             else {
-
+                response.getWriter().write("Attention, le client doit avoir plus de 18 ans, son adresse mail ne doit " +
+                        "pas être déjà prise, et son nom et prénom doivent faire au moins 3 caractères.");
             }
         }
         catch(ServiceException e){
             e.printStackTrace();
         }
-        response.sendRedirect("/rentmanager/users");
+
     }
 
 

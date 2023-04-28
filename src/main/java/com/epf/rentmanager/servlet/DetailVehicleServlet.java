@@ -18,7 +18,6 @@ import java.io.IOException;
 public class DetailVehicleServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-
     @Autowired
     ClientService clientService;
     @Autowired
@@ -33,16 +32,13 @@ public class DetailVehicleServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try{
-
             request.setAttribute("nb_reservations", reservationService.findByVehicleId(Integer.parseInt(request.getParameter("id"))).size());
             request.setAttribute("reservations", reservationService.findByVehicleId(Integer.parseInt(request.getParameter("id"))));
             request.setAttribute("vehicle", vehicleService.findById(Integer.parseInt(request.getParameter("id"))));
             request.setAttribute("user", clientService);
-
         }
         catch(ServiceException e){
             e.printStackTrace();
-
         }
         this.getServletContext().getRequestDispatcher("/WEB-INF/views/vehicles/details.jsp").forward(request, response);
 

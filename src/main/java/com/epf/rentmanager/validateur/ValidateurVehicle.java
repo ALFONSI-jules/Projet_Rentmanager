@@ -1,29 +1,23 @@
 package com.epf.rentmanager.validateur;
 import com.epf.rentmanager.AppConfiguration;
 import com.epf.rentmanager.exception.ServiceException;
-import com.epf.rentmanager.model.Client;
 import com.epf.rentmanager.model.Reservation;
 import com.epf.rentmanager.model.Vehicle;
-import com.epf.rentmanager.service.ClientService;
 import com.epf.rentmanager.service.ReservationService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
 
 public class ValidateurVehicle {
     private static List<Reservation> liste;
 
-    private static List<Reservation> liste2;
-
     private static long differenceInDays=0;
     static ApplicationContext context=new AnnotationConfigApplicationContext(AppConfiguration.class);
     private static ReservationService reservationService = context.getBean(ReservationService.class);
 
-    private static ReservationService reservationService2 = context.getBean(ReservationService.class);
     public static boolean voitureJour(Reservation reservation){
         try {
             liste = reservationService.findAll();
@@ -48,10 +42,7 @@ public class ValidateurVehicle {
         } catch (ServiceException e) {
             throw new RuntimeException(e);
         }
-
-
     }
-
 
     public static boolean resa7jours(Reservation reservation){
         LocalDate debut = reservation.getDebut();

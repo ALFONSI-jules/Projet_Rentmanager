@@ -30,17 +30,11 @@ public class DeleteResaServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-
-
             reservationService.delete(Integer.parseInt(request.getParameter("id").toString()));
-
-
-
         } catch (NumberFormatException | ServiceException e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
         }
-
         response.sendRedirect("../rents");
     }
 }

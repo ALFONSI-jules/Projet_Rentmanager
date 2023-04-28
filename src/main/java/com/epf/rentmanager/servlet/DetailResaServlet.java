@@ -33,16 +33,12 @@ public class DetailResaServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try{
-
             request.setAttribute("reservation", reservationService.findById(Integer.parseInt(request.getParameter("id"))));
             request.setAttribute("user", clientService );
             request.setAttribute("vehicle", vehicleService);
-
-
         }
         catch(ServiceException e){
             e.printStackTrace();
-
         }
         this.getServletContext().getRequestDispatcher("/WEB-INF/views/rents/details.jsp").forward(request, response);
 

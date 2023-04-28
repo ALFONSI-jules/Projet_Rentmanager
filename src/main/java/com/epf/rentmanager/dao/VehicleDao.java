@@ -1,13 +1,10 @@
 package com.epf.rentmanager.dao;
 
 import java.sql.*;
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import com.epf.rentmanager.exception.DaoException;
-import com.epf.rentmanager.model.Client;
 import com.epf.rentmanager.model.Vehicle;
 import com.epf.rentmanager.persistence.ConnectionManager;
 import org.springframework.stereotype.Repository;
@@ -27,19 +24,19 @@ public class VehicleDao {
 	
 	public long create(Vehicle vehicle) throws DaoException {
 		try(Connection connection = ConnectionManager.getConnection()){
-
 			PreparedStatement ps = connection.prepareStatement(CREATE_VEHICLE_QUERY,Statement.RETURN_GENERATED_KEYS);
-
 			ps.setString(1, vehicle.getConstructeur());
 			ps.setInt(2, vehicle.getNb_places());
 			ps.execute();
 			ResultSet resultSet = ps.getGeneratedKeys();
-			int id = resultSet.getInt(1);
-
+			int id=0;
+			if (resultSet.next()) {
+				id = resultSet.getInt(1);
+			}
 			return id;
 		}
 		catch(SQLException e){
-			throw new DaoException();
+			throw 	new DaoException();
 		}
 	}
 
@@ -47,7 +44,6 @@ public class VehicleDao {
 		try(Connection connection = ConnectionManager.getConnection()){
 			PreparedStatement ps = connection.prepareStatement(DELETE_VEHICLE_QUERY);
 			ps.setInt(1, id_Vehicle);
-
 			if(ps.executeUpdate()!=0){
 				return 1;
 			}
@@ -61,18 +57,11 @@ public class VehicleDao {
 	}
 	public long edit(Vehicle vehicle) throws DaoException {
 		try(Connection connection = ConnectionManager.getConnection()) {
-
 			PreparedStatement ps =connection.prepareStatement(EDIT_VEHICLE_QUERY);
-
 			ps.setString(1, vehicle.getConstructeur());
 			ps.setInt(2, vehicle.getNb_places());
 			ps.setInt(3, vehicle.getId());
-
-
-
-
 			return ps.executeUpdate();
-
 		} catch (SQLException e) {
 			throw new DaoException();
 		}
@@ -86,19 +75,14 @@ public class VehicleDao {
 			pstatement.setLong(1,id);
 			ResultSet rs = pstatement.executeQuery();
 			rs.next();
-
-
 			String constructeur = rs.getString("constructeur");
 			int nbPlaces = rs.getInt("nb_places");
 			return new Vehicle((int) id,constructeur,nbPlaces);
-
-
 		}
 		catch(SQLException e){
 			e.printStackTrace();
 			throw new DaoException();
 		}
-
 	}
 
 	public List<Vehicle> findAll() throws DaoException {
@@ -117,10 +101,6 @@ public class VehicleDao {
 		catch (SQLException e){
 			e.printStackTrace();
 		}
-
 		return vehicles;
-		
 	}
-	
-
 }

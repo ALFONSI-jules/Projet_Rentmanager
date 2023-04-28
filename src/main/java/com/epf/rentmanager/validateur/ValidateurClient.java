@@ -6,7 +6,6 @@ import com.epf.rentmanager.model.Client;
 import com.epf.rentmanager.service.ClientService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-
 import java.util.List;
 
 
@@ -18,7 +17,6 @@ public class ValidateurClient {
 
     public static boolean isLegal(Client client){
         return client.getAge()>=18;
-
     }
     public static boolean emailValide(Client client){
         try {
@@ -32,7 +30,6 @@ public class ValidateurClient {
         } catch (ServiceException e) {
             throw new RuntimeException(e);
         }
-
 
     }
     public static boolean nomValide(Client client){

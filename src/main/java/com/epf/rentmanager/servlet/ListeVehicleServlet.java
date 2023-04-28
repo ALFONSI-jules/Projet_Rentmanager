@@ -14,10 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/cars")
 public class ListeVehicleServlet extends HttpServlet {
-
-
     private static final long serialVersionUID = 1L;
-
     @Autowired
     VehicleService vehicleService;
     @Override
@@ -25,9 +22,6 @@ public class ListeVehicleServlet extends HttpServlet {
         super.init();
         SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
     }
-
-
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try{
@@ -35,7 +29,6 @@ public class ListeVehicleServlet extends HttpServlet {
         }
         catch(ServiceException e){
             e.printStackTrace();
-
         }
         this.getServletContext().getRequestDispatcher("/WEB-INF/views/vehicles/list.jsp").forward(request, response);
 

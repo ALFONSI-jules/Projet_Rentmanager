@@ -22,9 +22,6 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/rents/create")
 public class CreateResaServlet extends HttpServlet {
 
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
 
     @Autowired
@@ -69,16 +66,18 @@ public class CreateResaServlet extends HttpServlet {
             reservation.setFin(fin);
             if (ValidateurVehicle.voitureJour(reservation) && ValidateurVehicle.resa7jours(reservation)){
                 reservationService.create(reservation);
+                response.sendRedirect("../rents");
             }
             else{
-
+                response.getWriter().write("Attention, une voiture ne peut pas être reservé deux fois le même jour, " +
+                        "et un client ne peut réserver une voiture plus de 7 jours de suite.");
             }
 
         }
         catch(ServiceException e){
             e.printStackTrace();
         }
-        this.getServletContext().getRequestDispatcher("/WEB-INF/views/rents/create.jsp").forward(request, response);
+
     }
 
 }

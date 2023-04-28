@@ -15,8 +15,11 @@ public class test {
         final int CE_QUE_JE_VEUX=2;
         ApplicationContext context=new AnnotationConfigApplicationContext(AppConfiguration.class);
         ClientService clientService = context.getBean(ClientService.class);
-        //System.out.println (clientService.findAll());
-
+        try {
+            System.out.println (clientService.findAll());
+        } catch (ServiceException e) {
+            throw new RuntimeException(e);
+        }
 
 
     }

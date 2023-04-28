@@ -39,24 +39,15 @@ public class DeleteClientServlet extends HttpServlet{
                 for (Reservation r : liste){
                     if (r.getClient_id() == Integer.parseInt(request.getParameter("id"))){
                         reservationService.delete(r.getId());
-                        clientService.delete(Integer.parseInt(request.getParameter("id").toString()));
-                    }
-                    else{
-                        clientService.delete(Integer.parseInt(request.getParameter("id").toString()));
                     }
                 }
             }
-            else{
-                clientService.delete(Integer.parseInt(request.getParameter("id").toString()));
-            }
 
-
-
+            clientService.delete(Integer.parseInt(request.getParameter("id").toString()));
         } catch (NumberFormatException | ServiceException e) {
             System.out.println(e.getMessage());
             e.printStackTrace();
         }
-
         response.sendRedirect("../users");
     }
 }

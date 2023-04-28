@@ -17,7 +17,6 @@ import java.io.IOException;
 public class EditVehicleServlet extends HttpServlet {
     @Autowired
     private VehicleService vehicleService;
-
     private static final long serialVersionUID = 1L;
     public void init() throws ServletException {
         super.init();
@@ -25,18 +24,14 @@ public class EditVehicleServlet extends HttpServlet {
     }
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         try {
             request.setAttribute("vehicle", vehicleService.findById(Integer.parseInt(request.getParameter("id"))));
-
         } catch (ServiceException e) {
             throw new RuntimeException(e);
         }
         this.getServletContext().getRequestDispatcher("/WEB-INF/views/vehicles/edit.jsp").forward(request, response);
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
         try {
             Vehicle vehicle = new Vehicle();
             vehicle.setId(Integer.parseInt(request.getParameter("id")));
@@ -46,8 +41,6 @@ public class EditVehicleServlet extends HttpServlet {
         } catch (ServiceException e) {
             throw new RuntimeException(e);
         }
-
-
         response.sendRedirect("../cars");
     }
 

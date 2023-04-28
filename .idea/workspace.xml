@@ -5,24 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac5a6479-8fc4-42f1-a385-af5c353b11c3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/DeleteClientServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/DeleteResaServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/DeleteVehicleServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/DetailResaServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/DetailVehicleServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/EditClientServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/EditResaServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/EditVehicleServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/validateur/ValidateurVehicle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/rents/details.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/rents/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/vehicles/details.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/vehicles/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epf/rentmanager/util/ClientsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epf/rentmanager/util/RentsTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/epf/rentmanager/util/VehiclesTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/dao/ClientDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/dao/ClientDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/dao/ReservationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/dao/ReservationDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/dao/VehicleDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/dao/VehicleDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/model/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/model/Reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/model/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/model/Vehicle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/service/ClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/service/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/service/ReservationService.java" afterDir="false" />
@@ -30,21 +21,31 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/CreateClientServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/CreateClientServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/CreateResaServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/CreateResaServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/CreateVehicleServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/CreateVehicleServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/DeleteClientServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/DeleteClientServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/DeleteResaServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/DeleteResaServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/DeleteVehicleServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/DeleteVehicleServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/DetailClientServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/DetailClientServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/DetailResaServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/DetailResaServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/DetailVehicleServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/DetailVehicleServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/EditClientServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/EditClientServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/EditResaServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/EditResaServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/EditVehicleServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/EditVehicleServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/HomeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/HomeServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/ListeClientServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/ListeClientServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/ListeResaServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/ListeResaServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/ListeVehicleServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/servlet/ListeVehicleServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/ui/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/ui/test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/validateur/ValidateurClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/validateur/ValidateurClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/rents/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/rents/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/validateur/ValidateurVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/epf/rentmanager/validateur/ValidateurVehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/rents/details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/rents/details.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/details.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/users/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/vehicles/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/vehicles/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/vehicles/details.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/vehicles/details.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/classpath.index" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/classpath.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/dao/ClientDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/dao/ClientDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/dao/ReservationDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/dao/ReservationDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/dao/VehicleDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/dao/VehicleDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/model/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/model/Client.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/model/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/model/Reservation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/model/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/model/Vehicle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/persistence/FillDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/persistence/FillDatabase.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/service/ClientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/service/ClientService.class" afterDir="false" />
@@ -53,20 +54,43 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/CreateClientServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/CreateClientServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/CreateResaServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/CreateResaServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/CreateVehicleServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/CreateVehicleServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/DeleteClientServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/DeleteClientServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/DeleteResaServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/DeleteResaServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/DeleteVehicleServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/DeleteVehicleServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/DetailClientServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/DetailClientServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/DetailResaServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/DetailResaServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/DetailVehicleServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/DetailVehicleServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/EditClientServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/EditClientServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/EditResaServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/EditResaServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/EditVehicleServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/EditVehicleServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/HomeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/HomeServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/ListeClientServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/ListeClientServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/ListeResaServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/ListeResaServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/ListeVehicleServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/servlet/ListeVehicleServlet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/ui/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/ui/test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/validateur/ValidateurClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/validateur/ValidateurClient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/validateur/ValidateurVehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/epf/rentmanager/validateur/ValidateurVehicle.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/epf/rentmanager/Service/ClientServiceTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/epf/rentmanager/Service/ClientServiceTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/SESSIONS.ser" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/SESSIONS.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/classpath.index" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/classpath.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/logs/access_log.2023-04-27" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/logs/access_log.2023-04-27" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/SESSIONS.ser" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/common/footer_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/common/footer_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/common/footer_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/common/footer_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/home_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/home_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/home_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/home_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/rents/create_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/rents/create_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/rents/create_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/rents/create_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/rents/details_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/rents/details_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/rents/details_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/rents/details_jsp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/rents/list_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/rents/list_jsp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/rents/list_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/rents/list_jsp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/users/details_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/users/details_jsp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/users/details_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/users/details_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/users/create_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/users/create_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/users/create_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/users/create_jsp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/users/list_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/users/list_jsp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/users/list_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/users/list_jsp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/vehicles/create_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/vehicles/create_jsp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/vehicles/create_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/vehicles/create_jsp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/vehicles/list_jsp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/vehicles/list_jsp.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/vehicles/list_jsp.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/tomcat/work/Tomcat/localhost/rentmanager/org/apache/jsp/WEB_002dINF/views/vehicles/list_jsp.java" afterDir="false" />
     </list>
@@ -110,7 +134,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jules/rentmanager/rentmanager&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/RentManager-master&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.sourceCode.Groovy&quot;
   }
 }</component>
@@ -129,59 +153,88 @@
       <command value="mvn tomcat7:run" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ClientServiceTest.findAll_should_fail_when_dao_throws_exception (1)">
-    <configuration name="ClientServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.FillDatabase">
+    <configuration name="FillDatabase" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.epf.rentmanager.persistence.FillDatabase" />
       <module name="rentmanager" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ensta.rentmanager.Service.*" />
+          <option name="PATTERN" value="com.epf.rentmanager.persistence.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ensta.rentmanager.Service" />
-      <option name="MAIN_CLASS_NAME" value="com.ensta.rentmanager.Service.ClientServiceTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClientsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rentmanager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epf.rentmanager.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epf.rentmanager.util" />
+      <option name="MAIN_CLASS_NAME" value="com.epf.rentmanager.util.ClientsTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientServiceTest.findAll_should_fail_when_dao_throws_exception (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClientsTest.isLegal_should_return_false_when_email_is_invalid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rentmanager" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.epf.rentmanager.Service.*" />
+          <option name="PATTERN" value="com.epf.rentmanager.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.epf.rentmanager.Service" />
-      <option name="MAIN_CLASS_NAME" value="com.epf.rentmanager.Service.ClientServiceTest" />
-      <option name="METHOD_NAME" value="findAll_should_fail_when_dao_throws_exception" />
+      <option name="PACKAGE_NAME" value="com.epf.rentmanager.util" />
+      <option name="MAIN_CLASS_NAME" value="com.epf.rentmanager.util.ClientsTest" />
+      <option name="METHOD_NAME" value="isLegal_should_return_false_when_email_is_invalid" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClientServiceTest.findAll_should_fail_when_dao_throws_exception" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RentsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="rentmanager" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.ensta.rentmanager.Service.*" />
+          <option name="PATTERN" value="com.epf.rentmanager.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.ensta.rentmanager.Service" />
-      <option name="MAIN_CLASS_NAME" value="com.ensta.rentmanager.Service.ClientServiceTest" />
-      <option name="METHOD_NAME" value="findAll_should_fail_when_dao_throws_exception" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="com.epf.rentmanager.util" />
+      <option name="MAIN_CLASS_NAME" value="com.epf.rentmanager.util.RentsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VehiclesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="rentmanager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.epf.rentmanager.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.epf.rentmanager.util" />
+      <option name="MAIN_CLASS_NAME" value="com.epf.rentmanager.util.VehiclesTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ClientServiceTest.findAll_should_fail_when_dao_throws_exception (1)" />
-        <item itemvalue="JUnit.ClientServiceTest" />
-        <item itemvalue="JUnit.ClientServiceTest.findAll_should_fail_when_dao_throws_exception" />
+        <item itemvalue="Application.FillDatabase" />
+        <item itemvalue="JUnit.RentsTest" />
+        <item itemvalue="JUnit.VehiclesTest" />
+        <item itemvalue="JUnit.ClientsTest" />
+        <item itemvalue="JUnit.ClientsTest.isLegal_should_return_false_when_email_is_invalid" />
       </list>
     </recent_temporary>
   </component>

@@ -59,7 +59,7 @@
                                             <td>${vehicle.findById(reservation.vehicle_id).id}</td>
                                          	<td>${vehicle.findById(reservation.vehicle_id).constructeur}</td>
                                          	<td>${vehicle.findById(reservation.vehicle_id).nb_places}</td>
-                                        /tr>
+                                        </tr>
 
                                     </table>
                                 </div>

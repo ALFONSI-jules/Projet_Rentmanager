@@ -22,7 +22,6 @@ public class ListeResaServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
 
-
     @Autowired
     ClientService clientService;
     @Autowired
@@ -34,7 +33,6 @@ public class ListeResaServlet extends HttpServlet {
         super.init();
         SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
     }
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try{
@@ -42,15 +40,10 @@ public class ListeResaServlet extends HttpServlet {
             request.setAttribute("reservations", reservationService.findAll());
             request.setAttribute("client", clientService);
             request.setAttribute("vehicle", vehicleService);
-
-
         }
         catch(ServiceException e){
             e.printStackTrace();
-
         }
         this.getServletContext().getRequestDispatcher("/WEB-INF/views/rents/list.jsp").forward(request, response);
-
     }
-
 }

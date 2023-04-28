@@ -26,11 +26,8 @@ public class EditClientServlet extends HttpServlet{
         SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
     }
 
-
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-
         try {
             request.setAttribute("user", clientService.findById(Integer.parseInt(request.getParameter("id"))));
 
@@ -38,11 +35,8 @@ public class EditClientServlet extends HttpServlet{
             throw new RuntimeException(e);
         }
         this.getServletContext().getRequestDispatcher("/WEB-INF/views/users/edit.jsp").forward(request, response);
-
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-
         try {
             Client client = new Client();
             client.setId(Integer.parseInt(request.getParameter("id")));
@@ -54,8 +48,6 @@ public class EditClientServlet extends HttpServlet{
         } catch (ServiceException e) {
             throw new RuntimeException(e);
         }
-
-
         response.sendRedirect("../users");
     }
 }
